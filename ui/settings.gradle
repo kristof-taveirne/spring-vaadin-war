@@ -1,0 +1,19 @@
+pluginManagement {
+  repositories {
+    mavenCentral()
+    maven { url = 'https://maven.vaadin.com/vaadin-prereleases' }
+    gradlePluginPortal()
+  }
+  plugins {
+    id 'com.vaadin' version "24.4.6"
+  }
+}
+
+
+dependencyResolutionManagement {
+  versionCatalogs {
+    libs {
+      from(files("../gradle/libs.versions.toml"))
+    }
+  }
+}
